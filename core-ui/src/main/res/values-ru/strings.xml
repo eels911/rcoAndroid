@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Навигация -->
+    <string name="bnv_projects">Проекты</string>
+    <string name="bnv_settings">Настройки</string>
+    <string name="bnv_sign_in">Авторизация</string>
+    <string name="bnv_sign_up">Регистрация</string>
+
+    <string name="main_back_pressed">Нажмите еще раз для выхода</string>
+    <string name="default_error_message">Что-то пошло не так. Попробуйте повторить позже.</string>
+
+    <!-- Defaults -->
+    <string name="cancel">Отменить</string>
+    <string name="confirm">Подтвердить</string>
+    <string name="delete">Удалить</string>
+    <string name="settings">Настройки</string>
+
+    <string name="permission_geo">Геолокация</string>
+    <string name="permission_camera">Камера</string>
+    <string name="permission_storage">Мультимедиа</string>
+
+    <string name="email_hint">Электронная почта</string>
+    <string name="password_hint">Пароль</string>
+    <string name="password_repeat_hint">Повторите пароль</string>
+
+    <string name="account_created">Успешно! Аккаунт создан. Войдите прямо сейчас!</string>
+    <string name="sign_up_error">Ошибка! Попробуйте позже.</string>
+</resources>

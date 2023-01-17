@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <plurals name="groups">
+        <item quantity="one">%1$s группа</item>
+        <item quantity="few">%1$s группы</item>
+        <item quantity="many">%1$s групп</item>
+        <item quantity="other">%1$s группы</item>
+    </plurals>
+
+    <plurals name="objects">
+        <item quantity="one">%1$s объект</item>
+        <item quantity="few">%1$s объекта</item>
+        <item quantity="many">%1$s объектов</item>
+        <item quantity="other">%1$s объекта</item>
+    </plurals>
+
+    <plurals name="images">
+        <item quantity="one">%1$s изображение</item>
+        <item quantity="few">%1$s изображения</item>
+        <item quantity="many">%1$s изображений</item>
+        <item quantity="other">%1$s изображения</item>
+    </plurals>
+</resources>

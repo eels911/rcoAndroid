@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <dimen name="toolbar_height">90dp</dimen>
+    <dimen name="search_height">72dp</dimen>
+    <dimen name="bnv_height">90dp</dimen>
+    <dimen name="button_height">90dp</dimen>
+    <dimen name="auto_complete_height">80dp</dimen>
+    <dimen name="hero_in_draft_img_width">90dp</dimen>
+    <dimen name="hero_in_draft_img_height">52dp</dimen>
+    <dimen name="hero_in_suggest_img_width">124dp</dimen>
+    <dimen name="hero_in_suggest_img_height">74dp</dimen>
+    <dimen name="sequence_img_width">60dp</dimen>
+    <dimen name="sequence_img_height">30dp</dimen>
+    <dimen name="game_mode_width">400dp</dimen>
+    <dimen name="suggest_role_stage_value_width">90dp</dimen>
+
+
+    <dimen name="hero_in_selection_stage_img_width">198dp</dimen>
+    <dimen name="hero_in_selection_stage_img_height">112dp</dimen>
+    <integer name="heroes_in_draft_width_int">115</integer>
+
+    <dimen name="design_bottom_navigation_height" tools:override="true">72dp</dimen>
+    <dimen name="icon_size">72dp</dimen>
+    <dimen name="bnv_icon_size">36dp</dimen>
+    <dimen name="icon_padding_size">16dp</dimen>
+    <dimen name="border_size">2dp</dimen>
+
+
+    <dimen name="dropdown_padding">24dp</dimen>
+
+
+    <dimen name="loading_padding">32dp</dimen>
+    <dimen name="loading_min_width">400dp</dimen>
+    <dimen name="loading_progress_size">120dp</dimen>
+
+</resources>

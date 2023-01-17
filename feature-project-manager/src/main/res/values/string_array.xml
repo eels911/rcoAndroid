@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Добавлять новые типы только в конец списка, неактуальные не удалять -->
+    <string-array name="object_types">
+        <item>House</item>
+        <item>Hostel</item>
+        <item>Hotel</item>
+        <item>Administrative</item>
+        <item>Cultural</item>
+        <item>Communal</item>
+        <item>Educational</item>
+        <item>Medical</item>
+        <item>Sports and fitness complex</item>
+        <item>Farm</item>
+        <item>Greenhouse</item>
+        <item>Warehouse</item>
+        <item>Poultry house</item>
+        <item>Factory</item>
+        <item>Plant</item>
+        <item>Purification facility</item>
+        <item>Water tower</item>
+        <item>Dam</item>
+        <item>Platinum</item>
+        <item>Viaduct</item>
+        <item>Bridge</item>
+        <item>Overpass</item>
+        <item>GAS station</item>
+        <item>Shop</item>
+        <item>Hairdresser</item>
+        <item>Office space</item>
+        <item>Dining room</item>
+    </string-array>
+</resources>

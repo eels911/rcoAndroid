@@ -1,0 +1,53 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'kotlin-android-extensions'
+
+    id 'dagger.hilt.android.plugin'
+}
+
+android {
+    compileSdkVersion versions.compileSdk
+
+    defaultConfig {
+        minSdkVersion versions.minSdk
+        targetSdkVersion versions.targetSdk
+    }
+    compileOptions {
+        sourceCompatibility versions.JavaVers
+        targetCompatibility versions.JavaVers
+    }
+    buildTypes {
+        debug {
+            minifyEnabled false
+        }
+        beta {
+            minifyEnabled false
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    // Modules
+    implementation project(':core-base')
+
+    // Core
+    implementation library.appcompat
+
+    // RX
+    implementation library.rxpreferences
+    implementation library.gson
+
+    // DI
+    implementation library.hilt
+    kapt library.hilt_compiler
+
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@id/graphSignIn"
+        android:icon="@drawable/ic_bnv_sign_in"
+        android:title="@string/bnv_sign_in" />
+    <item
+        android:id="@id/graphSignUp"
+        android:icon="@drawable/ic_bnv_sign_up"
+        android:title="@string/bnv_sign_up" />
+
+</menu>

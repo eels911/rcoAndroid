@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorOnBackground">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_height"
+        android:background="@color/navigationBackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvPageName"
+                style="@style/AlmagestText.TypeDefault.Large.RobotoBold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toStartOf="@id/ivCreateImage"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivCreateImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_normal"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                app:layout_constraintEnd_toStartOf="@id/ivDeleteObject"
+                app:layout_constraintStart_toEndOf="@id/tvPageName"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_add_24" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivDeleteObject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_normal"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ivCreateImage"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_delete_24" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/barrier"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="rvImages,tvEmptyList" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvImages"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:listitem="@layout/item_group" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvEmptyList"
+                style="@style/AlmagestText.TypeDefault.Large.RobotoMedium"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:background="?android:attr/selectableItemBackground"
+                android:drawableTop="@drawable/ic_add_48"
+                android:drawablePadding="@dimen/padding_mini"
+                android:gravity="center"
+                android:text="@string/object_overview_list_empty_list"
+                android:textColor="@color/colorPrimary"
+                app:drawableTint="@color/colorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilCoordinates"
+                style="@style/CoordinatesOutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_normal"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:hint="@string/project_address_coordinates_hint"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/barrier">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etCoordinates"
+                    style="@style/AlmagestText.TypeDefault.Normal.RobotoMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false"
+                    android:inputType="text"
+                    android:maxLength="30"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilObjectType"
+                style="@style/DropDownOutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_normal"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:hint="@string/object_overview_type_hint"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tilCoordinates">
+
+                <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                    android:id="@+id/etObjectType"
+                    style="@style/AlmagestText.TypeDefault.Normal.RobotoMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/margin_small" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilName"
+                style="@style/ClearableOutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_normal"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:hint="@string/object_overview_name_hint"
+                app:errorEnabled="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tilObjectType">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etName"
+                    style="@style/AlmagestText.TypeDefault.Normal.RobotoMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:maxLength="100"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvIncomplete"
+                style="@style/AlmagestText.TypeDefault.Large.RobotoMedium"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_normal"
+                android:background="?android:attr/selectableItemBackground"
+                android:drawableTop="@drawable/ic_status_incomplete_24"
+                android:drawablePadding="@dimen/padding_mini"
+                android:gravity="center"
+                android:text="@string/object_overview_status_incomplete"
+                android:textColor="@color/red"
+                app:drawableTint="@color/red"
+                app:layout_constraintEnd_toStartOf="@id/tvChecked"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tilName" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvChecked"
+                style="@style/AlmagestText.TypeDefault.Large.RobotoMedium"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_normal"
+                android:background="?android:attr/selectableItemBackground"
+                android:drawableTop="@drawable/ic_status_checked_24"
+                android:drawablePadding="@dimen/padding_mini"
+                android:gravity="center"
+                android:text="@string/object_overview_status_checked"
+                android:textColor="@color/green"
+                app:drawableTint="@color/green"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tvIncomplete"
+                app:layout_constraintTop_toBottomOf="@id/tilName" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvReadyForReview"
+                style="@style/AlmagestText.TypeDefault.Large.RobotoMedium"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_normal"
+                android:background="?android:attr/selectableItemBackground"
+                android:drawableTop="@drawable/ic_status_ready_for_review_24"
+                android:drawablePadding="@dimen/padding_mini"
+                android:gravity="center"
+                android:text="@string/object_overview_status_ready_for_review"
+                android:textColor="@color/colorPrimary"
+                app:drawableTint="@color/colorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tilName" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/barrierStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="tvChecked, tvIncomplete, tvReadyForReview"
+                app:barrierDirection="bottom"
+                />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvAnalogs"
+                style="@style/AlmagestText.TypeDefault.Large.RobotoBold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:gravity="center"
+                android:text="@string/object_overview_same_type_objects"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/barrierStatus" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvObjects"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvAnalogs"
+                tools:listitem="@layout/item_object" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvEmptyListAnalogs"
+                style="@style/AlmagestText.TypeDefault.Large.RobotoMedium"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/margin_normal"
+                android:background="?android:attr/selectableItemBackground"
+                android:gravity="center"
+                android:text="@string/object_overview_same_type_objects_empty"
+                android:textColor="@color/colorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvAnalogs" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <com.sabina.project.external.LoadingView
+        android:id="@+id/loadingView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

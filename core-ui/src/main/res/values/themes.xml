@@ -1,0 +1,62 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="AlmagestTheme" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/navigationBackground</item>
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="23">false</item>
+    </style>
+
+    <style name="AlmagestTheme.Launcher">
+        <item name="android:windowBackground">@xml/logo_splash</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AlmagestTheme.Button" parent="@style/Widget.AppCompat.Button.Colored">
+        <item name="android:backgroundTint">@color/ic_button_background</item>
+        <item name="android:textColor">@color/ic_button_text</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textSize">@dimen/text_size_title</item>
+        <item name="android:letterSpacing">0.15</item>
+    </style>
+
+    <style name="AlertDialogTheme" parent="ThemeOverlay.AppCompat.Dialog.Alert">
+        <item name="buttonBarNegativeButtonStyle">@style/NegativeButtonStyle</item>
+        <item name="buttonBarPositiveButtonStyle">@style/PositiveButtonStyle</item>
+    </style>
+
+    <style name="NegativeButtonStyle" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">@color/textColor</item>
+        <item name="android:backgroundTint">@color/transparent</item>
+    </style>
+
+    <style name="PositiveButtonStyle" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">@color/textColor</item>
+        <item name="android:backgroundTint">@color/transparent</item>
+    </style>
+
+    <style name="ClearableOutlinedBox" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="endIconDrawable">@drawable/ic_error_24</item>
+        <item name="endIconTint">@color/textColor</item>
+        <item name="endIconMode">clear_text</item>
+    </style>
+
+    <style name="CoordinatesOutlinedBox" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="endIconMode">custom</item>
+        <item name="endIconTint">@color/textColor</item>
+        <item name="endIconDrawable">@drawable/ic_mark_24</item>
+    </style>
+
+    <style name="DropDownOutlinedBox" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+        <item name="endIconTint">@color/textColor</item>
+        <item name="boxStrokeColor">@color/til_box_color</item>
+    </style>
+
+
+</resources>

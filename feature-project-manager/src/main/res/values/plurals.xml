@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <plurals name="groups">
+        <item quantity="zero">%1$s groups</item>
+        <item quantity="one">%1$s group</item>
+        <item quantity="two">%1$s groups</item>
+        <item quantity="few">%1$s groups</item>
+        <item quantity="many">%1$s groups</item>
+        <item quantity="other">%1$s groups</item>
+    </plurals>
+
+    <plurals name="objects">
+        <item quantity="zero">%1$s objects</item>
+        <item quantity="one">%1$s object</item>
+        <item quantity="two">%1$s objects</item>
+        <item quantity="few">%1$s objects</item>
+        <item quantity="many">%1$s objects</item>
+        <item quantity="other">%1$s objects</item>
+    </plurals>
+
+    <plurals name="images">
+        <item quantity="zero">%1$s images</item>
+        <item quantity="one">%1$s image</item>
+        <item quantity="two">%1$s images</item>
+        <item quantity="few">%1$s images</item>
+        <item quantity="many">%1$s images</item>
+        <item quantity="other">%1$s images</item>
+    </plurals>
+
+</resources>

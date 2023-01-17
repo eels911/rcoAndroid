@@ -1,0 +1,65 @@
+image: openjdk:11-jdk
+
+variables:
+  ANDROID_COMPILE_SDK: "31"
+  ANDROID_BUILD_TOOLS: "32.0.0"
+  ANDROID_COMMAND_LINE_TOOLS: "7583922"
+  GRADLE_OPTS: "-Dorg.gradle.daemon=false"
+
+before_script:
+  - export GRADLE_USER_HOME=$(pwd)/.gradle
+  - chmod +x ./gradlew
+  - apt-get --quiet update --yes 
+  - apt-get --quiet install --yes curl jq wget tar unzip lib32stdc++6 lib32z1
+  - mkdir -p android-sdk-linux/cmdline-tools
+  - export ANDROID_SDK_ROOT=$PWD/android-sdk-linux
+  - cd android-sdk-linux/cmdline-tools
+  - wget --quiet --output-document=android-sdk.zip https://dl.google.com/android/repository/commandlinetools-linux-${ANDROID_COMMAND_LINE_TOOLS}_latest.zip
+  - unzip android-sdk.zip
+  - rm android-sdk.zip
+  - mv cmdline-tools version
+  - echo y | version/bin/sdkmanager "platforms;android-${ANDROID_COMPILE_SDK}" >/dev/null
+  - echo y | version/bin/sdkmanager "platform-tools" >/dev/null
+  - echo y | version/bin/sdkmanager "build-tools;${ANDROID_BUILD_TOOLS}" >/dev/null
+  - export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools/
+  # temporarily disable checking for EPIPE error and use yes to accept all licenses
+  - set +o pipefail
+  - yes | version/bin/sdkmanager --licenses
+  - set -o pipefail
+  - cd ../../
+  - chmod +x ./gradlew
+
+stages:
+  - build
+  ## test
+  ## deploy
+
+buildBranch:
+  stage: build
+  only:
+    - develop
+    - master
+  #  - /^release.*$/
+  cache:
+    paths:
+      - .gradle/caches
+  variables:
+    VAR_NAME: BUILD_NUMBER
+    TOKEN: ${CI_PIPELINE_IID_TOKEN}
+  script:
+  #   - GITLAB_URL=$(echo ${CI_PROJECT_URL} |awk -F "/" '{print $1 "//" $2$3}')
+  #   - "VAR=$(curl -f  --header \"PRIVATE-TOKEN: ${TOKEN}\" \"${GITLAB_URL}/api/v4/projects/${CI_PROJECT_ID}/variables/${VAR_NAME}\" | jq  -r '.value' ) "
+  #   - let VAR=VAR+1
+  #   - "curl -f --request PUT --header \"PRIVATE-TOKEN: ${TOKEN}\" \"${GITLAB_URL}/api/v4/projects/${CI_PROJECT_ID}/variables/${VAR_NAME}\" --form \"value=${VAR}\" "
+    - echo $VAR > build.version
+    - chmod +wx build.version
+    - sed -i 's/android.enableBuildCache=false/android.enableBuildCache=true/g' gradle.properties
+    - ./gradlew clean app:assembleDebug
+  #  запуск только вручную из gitlab
+  #  when: manual
+  artifacts:
+    name: "$CI_COMMIT_REF_SLUG.$CI_COMMIT_TAG"
+    when: always
+    expire_in: 4 weeks
+    paths:
+      - app/build/outputs/apk/

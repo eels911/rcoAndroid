@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="projects_app_name">Проекты</string>
+
+    <string name="project_list_toolbar_title">Список проектов</string>
+    <string name="project_list_empty_list">Список проектов пуст, создайте его прямо сейчас</string>
+    <string name="project_list_search_hint">Поиск</string>
+
+    <string name="project_overview_toolbar_title_creating">Создание проекта</string>
+    <string name="project_overview_toolbar_title_overview">Просмотр проекта</string>
+    <string name="project_overview_list_empty_list">Список групп пуст, создайте его прямо сейчас</string>
+    <string name="project_overview_name_hint">Наименование проекта</string>
+    <string name="project_overview_create_at">Время создания: %1$s</string>
+    <string name="project_overview_name_error">Обязательное поле</string>
+
+    <string name="project_overview_snack_warning_enter_name">Внимание! У проекта должно быть название.</string>
+    <string name="project_overview_snack_success_created">Успешно! Проект создан.</string>
+    <string name="project_overview_snack_success_deleted">Успешно! Проект удалён.</string>
+    <string name="project_overview_snack_success_updated">Успешно! Проект обновлён.</string>
+    <string name="project_overview_delete_dialog_title">Удалить проект?</string>
+
+    <string name="project_overview_delete_dialog_subtitle">После удаления данные будет &lt;b>невозможно&lt;/b> восстановить.</string>
+
+    <string name="project_address_toolbar_title">Адрес</string>
+    <string name="project_address_region_hint">Регион</string>
+    <string name="project_address_city_hint">Город</string>
+    <string name="project_address_post_code_hint">Почтовый индекс</string>
+    <string name="project_address_building_hint">Дом</string>
+    <string name="project_address_country_hint">Страна</string>
+    <string name="project_address_street_hint">Улица</string>
+    <string name="project_address_enter_address_hint">Введите адрес</string>
+    <string name="project_address_coordinates_hint">Координаты</string>
+    <string name="project_address_snack_success_updated">Успешно! Адрес обновлён.</string>
+
+    <string name="project_contacts_toolbar_title">Контакты</string>
+    <string name="project_contacts_snack_success_updated">Успешно! Контакты обновлены.</string>
+    <string name="project_contacts_email_hint">Электронная почта</string>
+    <string name="project_contacts_phone_hint">Номер телефона</string>
+    <string name="project_contacts_name_hint">Имя контакта</string>
+
+    <string name="map_toolbar_title">Карта</string>
+    <string name="map_btn_text_save">Сохранить координаты</string>
+    <string name="map_btn_text_tip">Поставьте метку</string>
+    <string name="map_snack_error_location">Не удалось определить местоположение</string>
+    <string name="map_coordinates">%1$.8f, %2$.8f</string>
+
+    <string name="rational_permission_request_dialog_subtitle">Вы отклонили запрос этого разрешения ранее. Следует выдать разрешение в окне настроек.</string>
+
+    <string name="group_overview_snack_warning_forbidden_for_role">Внимание! Ваша роль не может открыть объект с таким статусом.</string>
+    <string name="group_overview_snack_warning_already_has_this_status">Внимание! Этот объект уже имеет статус, который вы пытаетесь установить.</string>
+    <string name="group_overview_toolbar_title_creating">Создание группы</string>
+    <string name="group_overview_toolbar_title_overview">Просмотр группы</string>
+    <string name="group_overview_list_empty_list">Список объектов пуст, создайте его прямо сейчас</string>
+    <string name="group_overview_name_hint">Наименование группы</string>
+
+    <string name="group_overview_snack_warning_enter_name">Внимание! У группы должно быть название.</string>
+    <string name="group_overview_snack_success_created">Успешно! Группа создана.</string>
+    <string name="group_overview_snack_success_deleted">Успешно! Группа удалёна.</string>
+    <string name="group_overview_snack_success_updated">Успешно! Группа обновлёна.</string>
+    <string name="group_overview_delete_dialog_title">Удалить группу?</string>
+
+    <string name="object_overview_toolbar_title_creating">Создание объекта</string>
+    <string name="object_overview_toolbar_title_overview">Просмотр объекта</string>
+    <string name="object_overview_list_empty_list">Список изображений пуст, создайте его прямо сейчас</string>
+    <string name="object_overview_name_hint">Наименование объекта</string>
+    <string name="object_overview_type_hint">Тип объекта</string>
+    <string name="object_overview_type_default">Выберите тип</string>
+    <string name="object_overview_empty_name_for_list">Имя не указано</string>
+
+    <string name="object_overview_snack_warning_enter_type">Внимание! У объекта должен быть выбран тип.</string>
+    <string name="object_overview_snack_warning_enter_name">Внимание! У объекта должно быть название.</string>
+    <string name="object_overview_snack_success_created">Успешно! Объект создан.</string>
+    <string name="object_overview_snack_success_deleted">Успешно! Объект удалён.</string>
+    <string name="object_overview_snack_success_updated">Успешно! Объект обновлён.</string>
+    <string name="object_overview_snack_success_status_incomplete">Успешно! Статус был изменён на &lt;b>\"требуются изменения\"&lt;/b>.</string>
+    <string name="object_overview_snack_success_status_ready_for_review">Успешно! Статус был изменён на &lt;b>\"готово к проверке\"&lt;/b>.</string>
+    <string name="object_overview_snack_success_status_checked">Успешно! Статус был изменён на &lt;b>\"подтверждено\"&lt;/b>.</string>
+    <string name="object_overview_delete_dialog_title">Удалить объект?</string>
+    <string name="object_overview_same_type_objects">Аналоги</string>
+    <string name="object_overview_same_type_objects_empty">Список аналогов пуст</string>
+    <string name="object_overview_status_incomplete">Доработать</string>
+    <string name="object_overview_status_created">Создано</string>
+    <string name="object_overview_status_checked">Проверено</string>
+    <string name="object_overview_status_ready_for_review">Готово к проверке</string>
+
+    <string name="image_selector_toolbar_title">Выбор изображения</string>
+    <string name="image_selector_list_empty_list">Список изображений пуст, не удалось ничего найти на вашем устройстве.</string>
+
+    <string name="image_mode_camera">Сделать фото</string>
+    <string name="image_mode_gallery">Выбрать из галереи</string>
+
+    <string name="image_overview_toolbar_title_creating">Создание изображения</string>
+    <string name="image_overview_toolbar_title_overview">Просмотр изображения</string>
+    <string name="image_overview_name_hint">Наименование изображения</string>
+    <string name="image_overview_comment_hint">Комментарий</string>
+    <string name="image_overview_snack_warning_enter_photo">Внимание! Необходимо загрузить изображение.</string>
+    <string name="image_overview_delete_dialog_title">Удалить изображение?</string>
+    <string name="image_overview_snack_success_downloaded">Успешно! Изображение загружено.</string>
+    <string name="image_overview_snack_success_created">Успешно! Изображение создано.</string>
+    <string name="image_overview_snack_success_deleted">Успешно! Изображение удалено.</string>
+    <string name="image_overview_snack_success_updated">Успешно! Изображение обновлено.</string>
+
+    <string name="project_list_empty_list_reviewer">Список проектов пуст</string>
+    <string name="object_list_empty_list_reviewer">Список объектов пуст</string>
+    <string name="group_list_empty_list_reviewer">Список групп пуст</string>
+    <string name="image_list_empty_list_reviewer">Список изображений пуст</string>
+
+</resources>

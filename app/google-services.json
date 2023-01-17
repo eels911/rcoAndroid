@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "648587319297",
+    "project_id": "rco-android",
+    "storage_bucket": "rco-android.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:648587319297:android:3aba4b419f043f0e358800",
+        "android_client_info": {
+          "package_name": "com.sabina.project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "648587319297-4tfqg1shnp1jv0cp62hv36or9pvm7hnc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBcKlOTcrGUNjA3pyUy1ESiTcfahpFE2mQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "648587319297-4tfqg1shnp1jv0cp62hv36or9pvm7hnc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

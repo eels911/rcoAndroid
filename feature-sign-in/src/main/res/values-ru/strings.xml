@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sign_in">Войти</string>
+    <string name="logout">Выйти</string>
+    <string name="reset_password">Забыл пароль</string>
+
+</resources>

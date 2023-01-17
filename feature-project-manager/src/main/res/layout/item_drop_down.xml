@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.textview.MaterialTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tvObjectType"
+    style="@style/AlmagestText.TypeDefault.Normal.RobotoBold"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:scrollHorizontally="true"
+    android:ellipsize="start"
+    android:layout_marginVertical="@dimen/margin_mini"
+    android:background="@color/colorOnBackground"
+    android:padding="@dimen/padding_normal"
+    android:singleLine="true"
+    tools:text="Тип объектаобъектаобъектаобъектаобъекта" />

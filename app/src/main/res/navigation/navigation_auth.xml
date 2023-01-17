@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/graphAuth"
+    app:startDestination="@id/graphSignIn">
+
+    <include app:graph="@navigation/navigation_sign_up" />
+    <include app:graph="@navigation/navigation_sign_in" />
+
+
+
+</navigation>

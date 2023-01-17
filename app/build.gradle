@@ -1,0 +1,170 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'kotlin-android-extensions'
+
+    id 'com.google.gms.google-services'
+    id 'com.google.firebase.crashlytics'
+    id 'dagger.hilt.android.plugin'
+    id 'androidx.navigation.safeargs.kotlin'
+}
+
+android {
+    compileSdkVersion versions.compileSdk
+
+    defaultConfig {
+        vectorDrawables.useSupportLibrary = true
+        applicationId versions.applicationId
+        minSdkVersion versions.minSdk
+
+        targetSdkVersion versions.targetSdk
+        versionName generateVersionName()
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    signingConfigs {
+        debug {
+            storeFile file("${System.getProperty("user.home")}/.android/debug.keystore")
+        }
+        release {
+        //    keyAlias project.property("${versions.applicationId}.key.alias")
+          //  keyPassword project.property("${versions.applicationId}.key.pass")
+            //storeFile file(project.property("${versions.applicationId}.store.path"))
+            //storePassword project.property("${versions.applicationId}.store.pass")
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility versions.javaVers
+        targetCompatibility versions.javaVers
+    }
+    kotlinOptions {
+        jvmTarget = versions.javaVers.toString()
+    }
+    testOptions {
+        unitTests.returnDefaultValues = true
+        animationsDisabled = true
+    }
+    buildFeatures {
+        viewBinding true
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    // Modules
+    implementation project(':core-base')
+    implementation project(':core-ui')
+    implementation project(':core-navigation')
+    implementation project(':core-network')
+    implementation project(':core-local-storage')
+    implementation project(':feature-project-manager')
+    implementation project(':feature-settings')
+    implementation project(':feature-sign-in')
+    implementation project(':feature-sign-up')
+
+    // Core
+    implementation library.kotlin
+    implementation library.kotlin_reflect
+    implementation library.core
+    implementation library.activity
+    implementation library.fragment
+
+    // UI
+    implementation library.appcompat
+    implementation library.materialcomponents
+    implementation library.constraintlayout
+    implementation library.swiperefreshlayout
+    implementation library.flexboxlayout
+    implementation library.recyclerview
+    implementation library.recyclerview_selection
+    implementation library.multirecyclerview
+    implementation library.viewpager2
+    implementation library.glide
+    kapt library.glide_compiler
+
+    // AAC
+    implementation library.viewmodel
+    implementation library.lifecycle
+    implementation library.lifecycle_extensions
+
+    // Firebase
+    implementation library.firebase_platform
+    implementation library.firebase_firestore
+    implementation library.firebase_auth
+
+    // Navigation
+    implementation library.navigation_ui
+    implementation library.navigation_fragment
+    implementation library.navigation_runtime
+    implementation library.hilt_navigation_fragment
+
+    // Network
+    implementation library.gson
+
+    // RxJava
+    implementation library.rxjava
+    implementation library.rxandroid
+    implementation library.rxbinding
+    implementation library.rxkotlin
+    implementation library.rxpreferences
+
+    // MapKit Yandex
+    implementation library.map
+
+    // Coroutines
+    implementation library.coroutines_core
+    implementation library.coroutines_android
+    implementation library.coroutines_play_services
+
+    // DI
+    implementation library.hilt
+    kapt library.hilt_compiler
+}
+
+private Integer generateVersionCode() {
+    def minSDK = versions.minSdk * 1000000
+    def major = versions.versionMajor * 10000
+    def minor = versions.versionMinor * 100
+    def patch = versions.versionPatch
+    def versionCode = minSDK + major + minor + patch
+    project.logger.debug('versonCode ', versionCode)
+    return versionCode
+}
+
+private String generateVersionName() {
+    String versionName = "${versions.versionMajor}.${versions.versionMinor}.${versions.versionPatch}"
+    versionName += '.' + getBuildNumberFromFile()
+    return versionName
+}
+
+def getBuildNumberFromGit() {
+    try {
+        def stdout = new ByteArrayOutputStream()
+        exec {
+            commandLine 'git', 'rev-list', '--all', '--count'
+            standardOutput = stdout
+        }
+        return stdout.toString().trim()
+    }
+    catch (ignored) {
+        return '?'
+    }
+}
+
+def getBuildNumberFromFile() {
+    File versionFile = file('../build.version')
+    if (versionFile.exists()) {
+        return versionFile.readLines().get(0).trim()
+    } else {
+        return getBuildNumberFromGit()
+    }
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:opacity="opaque">
+
+    <item android:drawable="@color/colorOnBackground" />
+    <item
+        android:width="320dp"
+        android:height="320dp"
+        android:drawable="@drawable/ic_apartment_48dp"
+        android:gravity="center">
+    </item>
+</layer-list>

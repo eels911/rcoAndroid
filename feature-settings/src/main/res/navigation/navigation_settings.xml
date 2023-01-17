@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/graphSettings"
+    app:startDestination="@id/rootSettings">
+
+    <fragment
+        android:id="@+id/rootSettings"
+        android:name="com.sabina.project.settings.presentation.SettingsFragment"
+        android:label="SettingsFragment"
+        tools:layout="@layout/settings_fragment">
+        <deepLink app:uri="rco-android-app://com.sabina.project/root_settings" />
+        <action
+            android:id="@+id/settings_to_logoutDialog"
+            app:destination="@id/logoutDialog" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/logoutDialog"
+        android:name="com.sabina.project.settings.presentation.LogoutDialog"
+        android:label="LogoutDialog">
+
+        <deepLink app:uri="rco-android-app://com.sabina.project/root_settings/logout_dialog" />
+    </dialog>
+
+</navigation>

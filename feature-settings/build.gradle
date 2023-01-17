@@ -1,0 +1,104 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'kotlin-android-extensions'
+
+    id 'dagger.hilt.android.plugin'
+}
+
+android {
+    compileSdkVersion versions.compileSdk
+
+    defaultConfig {
+        minSdkVersion versions.minSdk
+        targetSdkVersion versions.targetSdk
+    }
+    compileOptions {
+        sourceCompatibility versions.JavaVers
+        targetCompatibility versions.JavaVers
+    }
+    buildTypes {
+        debug {
+            minifyEnabled false
+        }
+        beta {
+            minifyEnabled false
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    // Modules
+    implementation project(':core-base')
+    implementation project(':core-ui')
+    implementation project(':core-local-storage')
+    implementation project(':core-navigation')
+
+    // Core
+    implementation library.kotlin
+    implementation library.kotlin_reflect
+    implementation library.core
+    implementation library.activity
+    implementation library.fragment
+
+    // UI
+    implementation library.appcompat
+    implementation library.materialcomponents
+    implementation library.constraintlayout
+    implementation library.swiperefreshlayout
+    implementation library.flexboxlayout
+    implementation library.recyclerview
+    implementation library.recyclerview_selection
+    implementation library.multirecyclerview
+    implementation library.viewpager2
+    implementation library.glide
+    kapt library.glide_compiler
+
+    // AAC
+    implementation library.viewmodel
+    implementation library.lifecycle
+    implementation library.lifecycle_extensions
+
+    // Navigation
+    implementation library.navigation_ui
+    implementation library.navigation_fragment
+    implementation library.navigation_runtime
+    implementation library.hilt_navigation_fragment
+
+    // Coroutines
+    implementation library.coroutines_core
+    implementation library.coroutines_android
+
+    // RxJava
+    implementation library.rxjava
+    implementation library.rxandroid
+    implementation library.rxbinding
+    implementation library.rxkotlin
+    implementation library.rxpreferences
+
+    // Network
+    implementation library.retrofit
+    implementation library.gson
+
+    // DI
+    implementation library.hilt
+    kapt library.hilt_compiler
+
+    // Tests
+    androidTestImplementation library.kaspresso
+
+    // Firebase
+    implementation library.firebase_auth
+
+}

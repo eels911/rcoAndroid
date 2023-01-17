@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Добавлять новые типы только в конец списка, неактуальные не удалять -->
+    <string-array name="object_types">
+        <item>Жилой дом</item>
+        <item>Общежитие</item>
+        <item>Гостиница</item>
+        <item>Административное</item>
+        <item>Культурно-просветительное</item>
+        <item>Коммунальное</item>
+        <item>Учебное</item>
+        <item>Медицинское</item>
+        <item>Спортивно-оздоровительный комплекс</item>
+        <item>Ферма</item>
+        <item>Теплица</item>
+        <item>Склад</item>
+        <item>Птичник</item>
+        <item>Фабрика</item>
+        <item>Завод</item>
+        <item>Очистительное сооружение</item>
+        <item>Водонапорная башня</item>
+        <item>Дамба</item>
+        <item>Платина</item>
+        <item>Путепровод</item>
+        <item>Мост</item>
+        <item>Эстакада</item>
+        <item>АЗС</item>
+        <item>Магазин</item>
+        <item>Парикмахерская</item>
+        <item>Офисное помещение</item>
+        <item>Столовая</item>
+    </string-array>
+</resources>

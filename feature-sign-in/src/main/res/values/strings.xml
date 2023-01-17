@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sign_in">Sign in</string>
+    <string name="logout">Logout</string>
+    <string name="reset_password">Reset password</string>
+</resources>

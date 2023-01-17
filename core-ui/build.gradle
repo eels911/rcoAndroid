@@ -1,0 +1,41 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+}
+
+android {
+    compileSdkVersion versions.compileSdk
+
+    defaultConfig {
+        minSdkVersion versions.minSdk
+        targetSdkVersion versions.targetSdk
+    }
+    compileOptions {
+        sourceCompatibility versions.javaVers
+        targetCompatibility versions.javaVers
+    }
+    buildTypes {
+        debug {
+            minifyEnabled false
+        }
+        beta {
+            minifyEnabled false
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+    // UI
+    implementation library.materialcomponents
+
+    // Logs
+    implementation library.timber
+}

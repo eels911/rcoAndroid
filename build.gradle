@@ -1,0 +1,46 @@
+buildscript {
+    apply from: rootProject.file("dependencies.gradle")
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+        maven {
+            url "http://jitpack.io/"
+            allowInsecureProtocol = true
+        }
+    }
+
+    dependencies {
+        classpath plugin.android_gradle_plugin
+        classpath plugin.kotlin_gradle_plugin
+        classpath plugin.google_services_plugin
+        classpath plugin.firebase_crashlytics_gradle_plugin
+        classpath plugin.hilt_gradle_plugin
+        classpath plugin.android_nav_component_safe_args
+    }
+}
+
+allprojects {
+    apply from: rootProject.file("ktlint.gradle")
+    repositories {
+        maven {
+            url "http://jitpack.io/"
+            allowInsecureProtocol = true
+        }
+        jcenter()
+        mavenCentral()
+        google()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+task installGitHook(type: Copy) {
+    from new File(rootProject.rootDir, 'pre-commit')
+    into { new File(rootProject.rootDir, '.git/hooks') }
+    fileMode 0777
+}
+
+tasks.getByPath(':app:preBuild').dependsOn installGitHook

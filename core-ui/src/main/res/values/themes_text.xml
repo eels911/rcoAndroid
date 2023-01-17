@@ -1,0 +1,195 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="AlmagestText" parent="AlmagestTheme">
+
+    </style>
+
+    <!-- TextColor -->
+    <style name="AlmagestText.TypeDefault">
+        <item name="android:textColor">@color/textColor</item>
+    </style>
+
+    <style name="AlmagestText.TypeSecondary">
+        <item name="android:textColor">@color/textColorSecondary</item>
+    </style>
+
+    <!-- TextSize -->
+    <!-- TextSize Mini -->
+    <style name="AlmagestText.TypeDefault.Mini">
+        <item name="android:textSize">@dimen/text_size_mini</item>
+    </style>
+
+    <style name="AlmagestText.TypeSecondary.Mini">
+        <item name="android:textSize">@dimen/text_size_mini</item>
+    </style>
+
+    <!-- TextSize Small -->
+    <style name="AlmagestText.TypeDefault.Small">
+        <item name="android:textSize">@dimen/text_size_small</item>
+    </style>
+
+    <style name="AlmagestText.TypeSecondary.Small">
+        <item name="android:textSize">@dimen/text_size_small</item>
+    </style>
+
+    <!-- TextSize Normal -->
+    <style name="AlmagestText.TypeDefault.Normal">
+        <item name="android:textSize">@dimen/text_size_normal</item>
+    </style>
+
+    <style name="AlmagestText.TypeSecondary.Normal">
+        <item name="android:textSize">@dimen/text_size_normal</item>
+    </style>
+
+    <!-- TextSize Title -->
+    <style name="AlmagestText.TypeDefault.Title">
+        <item name="android:textSize">@dimen/text_size_title</item>
+    </style>
+
+    <style name="AlmagestText.TypeSecondary.Title">
+        <item name="android:textSize">@dimen/text_size_title</item>
+    </style>
+
+    <!-- TextSize Large -->
+    <style name="AlmagestText.TypeDefault.Large">
+        <item name="android:textSize">@dimen/text_size_large</item>
+    </style>
+
+    <style name="AlmagestText.TypeSecondary.Large">
+        <item name="android:textSize">@dimen/text_size_large</item>
+    </style>
+
+    <!-- TextSize ExtraLarge -->
+    <style name="AlmagestText.TypeDefault.ExtraLarge">
+        <item name="android:textSize">@dimen/text_size_extra_large</item>
+    </style>
+
+    <style name="AlmagestText.TypeSecondary.ExtraLarge">
+        <item name="android:textSize">@dimen/text_size_extra_large</item>
+    </style>
+
+    <!-- TextSize Giant -->
+    <style name="AlmagestText.TypeDefault.Giant">
+        <item name="android:textSize">@dimen/text_size_giant</item>
+    </style>
+
+    <style name="AlmagestText.TypeSecondary.Giant">
+        <item name="android:textSize">@dimen/text_size_giant</item>
+    </style>
+
+    <!-- TextFont -->
+    <!-- TextFont RobotoBold -->
+    <style name="AlmagestText.TypeDefault.Mini.RobotoBold">
+        <item name="fontFamily">@font/roboto_bold</item>
+    </style>
+
+    <style name="AlmagestText.TypeSecondary.Mini.RobotoBold">
+        <item name="fontFamily">@font/roboto_bold</item>
+    </style>
+
+    <style name="AlmagestText.TypeDefault.Small.RobotoBold">
+        <item name="fontFamily">@font/roboto_bold</item>
+    </style>
+
+    <style name="AlmagestText.TypeSecondary.Small.RobotoBold">
+        <item name="fontFamily">@font/roboto_bold</item>
+    </style>
+
+    <style name="AlmagestText.TypeDefault.Normal.RobotoBold">
+        <item name="fontFamily">@font/roboto_bold</item>
+    </style>
+
+    <style name="AlmagestText.TypeSecondary.Normal.RobotoBold">
+        <item name="fontFamily">@font/roboto_bold</item>
+    </style>
+
+    <style name="AlmagestText.TypeDefault.Title.RobotoBold">
+        <item name="fontFamily">@font/roboto_bold</item>
+    </style>
+
+    <style name="AlmagestText.TypeSecondary.Title.RobotoBold">
+        <item name="fontFamily">@font/roboto_bold</item>
+    </style>
+
+    <style name="AlmagestText.TypeDefault.Large.RobotoBold">
+        <item name="fontFamily">@font/roboto_bold</item>
+    </style>
+
+    <style name="AlmagestText.TypeSecondary.Large.RobotoBold">
+        <item name="fontFamily">@font/roboto_bold</item>
+    </style>
+
+    <style name="AlmagestText.TypeDefault.ExtraLarge.RobotoBold">
+        <item name="fontFamily">@font/roboto_bold</item>
+    </style>
+
+    <style name="AlmagestText.TypeSecondary.ExtraLarge.RobotoBold">
+        <item name="fontFamily">@font/roboto_bold</item>
+    </style>
+
+    <style name="AlmagestText.TypeDefault.Giant.RobotoBold">
+        <item name="fontFamily">@font/roboto_bold</item>
+    </style>
+
+    <style name="AlmagestText.TypeSecondary.Giant.RobotoBold">
+        <item name="fontFamily">@font/roboto_bold</item>
+    </style>
+
+    <!-- TextFont RobotoMedium -->
+    <style name="AlmagestText.TypeDefault.Mini.RobotoMedium">
+        <item name="fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="AlmagestText.TypeSecondary.Mini.RobotoMedium">
+        <item name="fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="AlmagestText.TypeDefault.Small.RobotoMedium">
+        <item name="fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="AlmagestText.TypeSecondary.Small.RobotoMedium">
+        <item name="fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="AlmagestText.TypeDefault.Normal.RobotoMedium">
+        <item name="fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="AlmagestText.TypeSecondary.Normal.RobotoMedium">
+        <item name="fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="AlmagestText.TypeDefault.Title.RobotoMedium">
+        <item name="fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="AlmagestText.TypeSecondary.Title.RobotoMedium">
+        <item name="fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="AlmagestText.TypeDefault.Large.RobotoMedium">
+        <item name="fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="AlmagestText.TypeSecondary.Large.RobotoMedium">
+        <item name="fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="AlmagestText.TypeDefault.ExtraLarge.RobotoMedium">
+        <item name="fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="AlmagestText.TypeSecondary.ExtraLarge.RobotoMedium">
+        <item name="fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="AlmagestText.TypeDefault.Giant.RobotoMedium">
+        <item name="fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="AlmagestText.TypeSecondary.Giant.RobotoMedium">
+        <item name="fontFamily">@font/roboto_medium</item>
+    </style>
+
+</resources>

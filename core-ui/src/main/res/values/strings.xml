@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name" translatable="false">RCO</string>
+
+    <!-- Навигация -->
+    <string name="bnv_projects">Projects</string>
+    <string name="bnv_settings">Settings</string>
+    <string name="bnv_sign_in">Sign in</string>
+    <string name="bnv_sign_up">Sign up</string>
+
+    <string name="main_back_pressed">Click again to exit</string>
+    <string name="default_error_message">Error! Something is wrong. Try later.</string>
+
+    <!-- Defaults -->
+    <string name="cancel">Cancel</string>
+    <string name="confirm">Confirm</string>
+    <string name="delete">Delete</string>
+    <string name="settings">Settings</string>
+
+    <string name="permission_geo">Geolocation</string>
+    <string name="permission_camera">Camera</string>
+    <string name="permission_storage">Storage</string>
+
+
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="password_repeat_hint">Repeat password</string>
+    <string name="account_created">Success! Account created. Sign in right now!</string>
+    <string name="sign_up_error">Error! Try later.</string>
+</resources>

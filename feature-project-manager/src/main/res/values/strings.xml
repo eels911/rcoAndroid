@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="projects_app_name">Projects</string>
+
+    <string name="project_list_toolbar_title">Project list</string>
+    <string name="project_list_empty_list">List is empty, create a new project right now</string>
+    <string name="project_list_search_hint">Search</string>
+
+    <string name="project_overview_toolbar_title_creating">Create project</string>
+    <string name="project_overview_toolbar_title_overview">Overview project</string>
+    <string name="project_overview_list_empty_list">List is empty, create a new group right now</string>
+    <string name="project_overview_name_hint">Project name</string>
+    <string name="project_overview_create_at">Created at: %1$s</string>
+    <string name="project_overview_name_error">Required field</string>
+
+    <string name="project_overview_snack_warning_enter_name">Attention! The project must have a name.</string>
+    <string name="project_overview_snack_success_created">Success! The project was created.</string>
+    <string name="project_overview_snack_success_deleted">Success! The project was deleted.</string>
+    <string name="project_overview_snack_success_updated">Success! The project was updated.</string>
+
+    <string name="project_overview_delete_dialog_title">Delete project?</string>
+    <string name="project_overview_delete_dialog_subtitle">After deleting the data &lt;b>cannot be restored&lt;/b>.</string>
+
+    <string name="project_address_toolbar_title">Address</string>
+    <string name="project_address_region_hint">Region</string>
+    <string name="project_address_city_hint">City</string>
+    <string name="project_address_post_code_hint">Post code</string>
+    <string name="project_address_building_hint">Building</string>
+    <string name="project_address_country_hint">Country</string>
+    <string name="project_address_enter_address_hint">Enter an address</string>
+    <string name="project_address_street_hint">Street</string>
+    <string name="project_address_coordinates_hint">Coordinates</string>
+    <string name="project_address_snack_success_updated">Success! The address was updated.</string>
+
+    <string name="project_contacts_toolbar_title">Contacts</string>
+    <string name="project_contacts_snack_success_updated">Success! The contacts were updated.</string>
+    <string name="project_contacts_email_hint">E-mail</string>
+    <string name="project_contacts_phone_hint">Phone number</string>
+    <string name="project_contacts_name_hint">Contact name</string>
+
+    <string name="map_toolbar_title">Map</string>
+    <string name="map_btn_text_save">Save coordinates</string>
+    <string name="map_btn_text_tip">Put a mark</string>
+    <string name="map_snack_error_location">Couldn\'t find your geolocation</string>
+    <string name="map_coordinates">%1$.8f, %2$.8f</string>
+
+    <string name="rational_permission_request_dialog_subtitle">You have already denied this permission. You should grant permission in the settings.</string>
+
+    <string name="group_overview_toolbar_title_creating">Create group</string>
+    <string name="group_overview_toolbar_title_overview">Overview group</string>
+    <string name="group_overview_list_empty_list">List is empty, create a new object right now</string>
+    <string name="group_overview_name_hint">Group name</string>
+
+    <string name="group_overview_snack_warning_forbidden_for_role">Attention! Your role can\'t review object with this status.</string>
+    <string name="group_overview_snack_warning_already_has_this_status">Attention! This object already has the status that you are trying to set.</string>
+    <string name="group_overview_snack_warning_enter_name">Attention! The group must have a name.</string>
+    <string name="group_overview_snack_success_created">Success! The group was created.</string>
+    <string name="group_overview_snack_success_deleted">Success! The group was deleted.</string>
+    <string name="group_overview_snack_success_updated">Success! The group was updated.</string>
+    <string name="object_overview_snack_success_status_incomplete">Success! The status was changed to &lt;b>\"incomplete\"&lt;/b>.</string>
+    <string name="object_overview_snack_success_status_ready_for_review">Success! The status was changed to &lt;/b>\"ready for review\"&lt;/b>.</string>
+    <string name="object_overview_snack_success_status_checked">Success! The status was changed to &lt;/b>\"checked\"&lt;/b>.</string>
+    <string name="group_overview_delete_dialog_title">Delete group?</string>
+
+    <string name="object_overview_toolbar_title_creating">Create object</string>
+    <string name="object_overview_toolbar_title_overview">Overview object</string>
+    <string name="object_overview_list_empty_list">List is empty, create a new image right now</string>
+    <string name="object_overview_name_hint">Object name</string>
+    <string name="object_overview_type_hint">Object type</string>
+    <string name="object_overview_type_default">Select a type</string>
+    <string name="object_overview_empty_name_for_list">The image\'s name wasn\'t specified</string>
+    <string name="object_overview_status_incomplete">Incomplete</string>
+    <string name="object_overview_status_created">Created</string>
+    <string name="object_overview_status_checked">Checked</string>
+    <string name="object_overview_status_ready_for_review">Ready for review</string>
+
+    <string name="object_overview_snack_warning_enter_type">Attention! The object must have a type.</string>
+    <string name="object_overview_snack_warning_enter_name">Attention! The object must have a name.</string>
+    <string name="object_overview_snack_success_created">Success! The object was created.</string>
+    <string name="object_overview_snack_success_deleted">Success! The object was deleted.</string>
+    <string name="object_overview_snack_success_updated">Success! The object was updated.</string>
+    <string name="object_overview_delete_dialog_title">Delete object?</string>
+    <string name="object_overview_same_type_objects">Analogs</string>
+    <string name="object_overview_same_type_objects_empty">List of analogs is empty</string>
+
+
+    <string name="image_selector_toolbar_title">Select an image</string>
+    <string name="image_selector_list_empty_list">List is empty, couldn\'t find any images in your device.</string>
+
+    <string name="image_mode_camera">Take a photo</string>
+    <string name="image_mode_gallery">Choose from the gallery</string>
+
+    <string name="image_overview_toolbar_title_creating">Create image</string>
+    <string name="image_overview_toolbar_title_overview">Overview image</string>
+    <string name="image_overview_name_hint">Image name</string>
+    <string name="image_overview_comment_hint">Comment</string>
+    <string name="image_overview_snack_warning_enter_photo">Attention! The image must have a photograph.</string>
+    <string name="image_overview_delete_dialog_title">Delete image?</string>
+    <string name="image_overview_snack_success_downloaded">Success! The image was downloaded.</string>
+    <string name="image_overview_snack_success_created">Success! The image was created.</string>
+    <string name="image_overview_snack_success_deleted">Success! The image was deleted.</string>
+    <string name="image_overview_snack_success_updated">Success! The image was updated.</string>
+
+    <string name="project_list_empty_list_reviewer">List of projects is empty</string>
+    <string name="object_list_empty_list_reviewer">List of objects is empty</string>
+    <string name="group_list_empty_list_reviewer">List of groups is empty</string>
+    <string name="image_list_empty_list_reviewer">List of images is empty</string>
+
+</resources>

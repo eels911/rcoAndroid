@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2C86F1</color>
+    <color name="colorPrimaryDark">#0E4F9D</color>
+    <color name="colorAccent">#89BBF8</color>
+
+    <color name="transparent">#00ffffff</color>
+
+    <color name="textColor">#F5F5F5</color>
+    <color name="textColorSecondary">#B4BBC5</color>
+
+    <color name="ic_button_background">#89BBF8</color>
+    <color name="ic_button_text">#181E28</color>
+    <color name="navigationBackground">#222C3B</color>
+    <color name="colorOnBackground">#181E28</color>
+    <color name="statusBarColor">#222C3B</color>
+
+    <color name="for_dark_mode_definition">#181E28</color>
+
+    <color name="black">#FF000000</color>
+    <color name="black_88">#88000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="un_gray">#6D6D6D</color>
+
+    <color name="red">#CE412D</color>
+    <color name="green">#3BDA00</color>
+    <color name="yellow">#FFF800</color>
+</resources>

@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/graphProjectManager"
+    app:startDestination="@id/projectListFragment">
+
+    <fragment
+        android:id="@+id/projectListFragment"
+        android:name="com.sabina.project.project_manager.presentation.ProjectListFragment"
+        android:label="ProjectListFragment"
+        tools:layout="@layout/fragment_project_list">
+
+        <deepLink app:uri="rco-android-app://com.sabina.project/root_project_manager" />
+
+        <action android:id="@+id/projectList_to_projectOverview"
+            app:destination="@id/projectOverviewFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/projectOverviewFragment"
+        android:name="com.sabina.project.project_manager.presentation.project_overview.ProjectOverviewFragment"
+        android:label="ProjectOverviewFragment"
+        tools:layout="@layout/fragment_project_overview">
+
+        <deepLink app:uri="rco-android-app://com.sabina.project/root_project_manager/project?item={item}" />
+        <action android:id="@+id/projectOverview_to_groupOverview"
+            app:destination="@id/groupOverviewFragment" />
+        <action android:id="@+id/projectOverview_to_contacts"
+            app:destination="@id/contactsFragment" />
+        <action android:id="@+id/projectOverview_to_address"
+            app:destination="@id/addressFragment" />
+        <action android:id="@+id/projectOverview_to_deleteDialog"
+            app:destination="@id/deleteDialog" />
+        <argument
+            android:name="item"
+            android:defaultValue=""
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/groupOverviewFragment"
+        android:name="com.sabina.project.project_manager.presentation.project_overview.group_overview.GroupOverviewFragment"
+        android:label="GroupOverviewFragment"
+        tools:layout="@layout/fragment_group_overview">
+
+        <deepLink app:uri="rco-android-app://com.sabina.project/root_project_manager/project/group?project={project}&amp;group={group}" />
+        <argument
+            android:name="project"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="group"
+            android:defaultValue=""
+            app:argType="string" />
+        <action android:id="@+id/groupOverview_to_deleteDialog"
+            app:destination="@id/deleteDialog" />
+        <action android:id="@+id/groupOverview_to_objectOverview"
+            app:destination="@id/objectOverviewFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addressFragment"
+        android:name="com.sabina.project.project_manager.presentation.project_overview.address.AddressFragment"
+        android:label="AddressFragment"
+        tools:layout="@layout/fragment_address">
+
+        <action android:id="@+id/address_to_map"
+            app:destination="@id/mapFragment" />
+
+        <deepLink app:uri="rco-android-app://com.sabina.project/root_project_manager/project/address?item={item}" />
+        <argument
+            android:name="item"
+            android:defaultValue=""
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/contactsFragment"
+        android:name="com.sabina.project.project_manager.presentation.project_overview.contacts.ContactsFragment"
+        android:label="ContactsFragment"
+        tools:layout="@layout/fragment_contacts">
+
+        <deepLink app:uri="rco-android-app://com.sabina.project/root_project_manager/project/contacts?item={item}" />
+        <argument
+            android:name="item"
+            android:defaultValue=""
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/objectOverviewFragment"
+        android:name="com.sabina.project.project_manager.presentation.project_overview.group_overview.object_overview.ObjectOverviewFragment"
+        android:label="ObjectOverviewFragment"
+        tools:layout="@layout/fragment_object_overview">
+
+        <deepLink app:uri="rco-android-app://com.sabina.project/root_project_manager/project/group/object?project={project}&amp;obj={obj}&amp;groupUuid={groupUuid}" />
+        <argument
+            android:name="project"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="groupUuid"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="obj"
+            android:defaultValue=""
+            app:argType="string" />
+
+        <action android:id="@+id/objectOverview_to_deleteDialog"
+            app:destination="@id/deleteDialog" />
+        <action android:id="@+id/objectOverview_to_map"
+            app:destination="@id/mapFragment" />
+        <action android:id="@+id/objectOverview_to_imageOverview"
+            app:destination="@id/imageOverviewFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/imageOverviewFragment"
+        android:name="com.sabina.project.project_manager.presentation.project_overview.group_overview.object_overview.image_overview.ImageOverviewFragment"
+        android:label="ImageOverviewFragment"
+        tools:layout="@layout/fragment_image_overview">
+
+
+    <deepLink app:uri="rco-android-app://com.sabina.project/root_project_manager/project/group/object/image?project={project}&amp;objUuid={objUuid}&amp;groupUuid={groupUuid}&amp;image={image}" />
+        <argument
+            android:name="project"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="groupUuid"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="objUuid"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="image"
+            android:defaultValue=""
+            app:argType="string" />
+
+        <action android:id="@+id/imageOverview_to_deleteDialog"
+            app:destination="@id/deleteDialog" />
+        <action android:id="@+id/imageOverview_to_map"
+            app:destination="@id/mapFragment" />
+        <action android:id="@+id/imageOverview_to_gallery"
+            app:destination="@id/galleryFragment" />
+        <action android:id="@+id/imageOverview_to_camera"
+            app:destination="@id/cameraFragment" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/deleteDialog"
+        android:name="com.sabina.project.project_manager.presentation.dialogs.DeleteDialog"
+        android:label="DeleteDialog">
+
+        <deepLink app:uri="rco-android-app://com.sabina.project/root_project_manager/project/dialog_delete?title={title}" />
+        <argument
+            android:name="title"
+            app:argType="integer" />
+    </dialog>
+
+    <dialog
+        android:id="@+id/rationalPermissionDialog"
+        android:name="com.sabina.project.project_manager.presentation.dialogs.RationalPermissionDialog"
+        android:label="RationalPermissionDialog">
+
+        <deepLink app:uri="rco-android-app://com.sabina.project/permission_dialog?title={title}" />
+        <argument
+            android:name="title"
+            app:argType="string" />
+    </dialog>
+
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.sabina.project.project_manager.presentation.map.MapFragment"
+        android:label="MapFragment"
+        tools:layout="@layout/map_fragment">
+
+
+        <action android:id="@+id/map_to_rationalDialog"
+            app:destination="@id/rationalPermissionDialog" />
+
+        <deepLink app:uri="rco-android-app://com.sabina.project/root_project_manager/map?item={item}" />
+        <argument
+            android:name="item"
+            android:defaultValue=""
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/cameraFragment"
+        android:name="com.sabina.project.project_manager.presentation.images.camera.CameraFragment"
+        android:label="CameraFragment"
+        tools:layout="@layout/fragment_camera">
+
+        <action android:id="@+id/camera_to_rationalDialog"
+            app:destination="@id/rationalPermissionDialog" />
+
+        <deepLink app:uri="rco-android-app://com.sabina.project/root_project_manager/camera" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/galleryFragment"
+        android:name="com.sabina.project.project_manager.presentation.images.gallery.GalleryFragment"
+        android:label="GalleryFragment"
+        tools:layout="@layout/fragment_gallery">
+
+        <action android:id="@+id/gallery_to_rationalDialog"
+            app:destination="@id/rationalPermissionDialog" />
+
+        <deepLink app:uri="rco-android-app://com.sabina.project/root_project_manager/gallery" />
+    </fragment>
+
+</navigation>

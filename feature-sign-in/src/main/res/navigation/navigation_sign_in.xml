@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/graphSignIn"
+    app:startDestination="@id/rootSignIn">
+
+    <fragment
+        android:id="@+id/rootSignIn"
+        android:name="com.sabina.project.sign_in.presentation.SignInFragment"
+        tools:layout="@layout/sign_in_fragment">
+
+        <deepLink app:uri="rco-android-app://com.sabina.project/root_sign_in" />
+    </fragment>
+
+</navigation>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings_app_name">Настройки</string>
+    <string name="settings_page_name">Настройки приложения</string>
+
+    <string name="logout_dialog_title">Выйти?</string>
+    <string name="logout_dialog_subtitle">Вы действительно хотите выйти?</string>
+
+    <string name="color_scheme">Цветовая схема</string>
+    <string name="night_mode_system">Системная</string>
+    <string name="night_mode_always">Темная</string>
+    <string name="night_mode_never">Светлая</string>
+
+    <string name="locale_scheme">Язык приложения</string>
+    <string name="locale_ru">Русский</string>
+    <string name="locale_en">Английский</string>
+    <string name="contact_me">Для любых вопросов</string>
+    <string name="about_app">По поводу проекта</string>
+    <string name="email_client_required">Ошибка! Требуется почтовый клиент на устройстве.</string>
+</resources>

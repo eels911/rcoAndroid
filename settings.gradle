@@ -1,0 +1,10 @@
+include ':app',
+        ':core-base',
+        ':core-ui',
+        ':core-local-storage',
+        ':core-network',
+        ':core-navigation',
+        ':feature-project-manager',
+        ':feature-settings',
+        ':feature-sign-in',
+        ':feature-sign-up'

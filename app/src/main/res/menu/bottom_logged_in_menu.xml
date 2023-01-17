@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@id/graphProjectManager"
+        android:icon="@drawable/ic_bnv_live"
+        android:title="@string/bnv_projects" />
+    <item
+        android:id="@id/graphSettings"
+        android:icon="@drawable/ic_bnv_settings"
+        android:title="@string/bnv_settings" />
+
+</menu>
